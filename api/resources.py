@@ -37,3 +37,19 @@ class ServiceAreaResource(ModelResource):
         filtering = {
             'polygon': ALL,
         }
+
+    def hydrate_polygon(self, bundle):
+        """Puts in a None value for a polygon
+
+        Necessary since tastypie's default hydration fails to serialize the polygon field itself
+        if the field is not passed while updating (PUT requests) a service_provdier
+
+        Arguments:
+            bundle {[type]} -- [description]
+
+        Returns:
+            [type] -- [description]
+        """
+        if 'polygon' not in bundle.data.keys():
+            bundle.data["polygon"] = None
+        return bundle

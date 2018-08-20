@@ -1,0 +1,13 @@
+requirements 
+Mysql
+sudo apt-get update
+sudo apt-get install python-pip python-dev mysql-server libmysqlclient-dev
+
+Python & Packages
+sudo apt-get update
+apt install python3
+apt install python3-pip
+pip3 install Django
+pip3 install django-tastypie
+pip3 install mysqlclient
+

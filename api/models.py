@@ -21,8 +21,8 @@ class Provider(models.Model):
     name = models.CharField(max_length=30)
     email = models.CharField(max_length=30)
     phone_number = models.CharField(max_length=20)
-    language = models.ForeignKey(Language, null=True)
-    currency = models.ForeignKey(Currency, null=True)
+    language = models.ForeignKey(Language, null=True, on_delete=models.PROTECT)
+    currency = models.ForeignKey(Currency, null=True, on_delete=models.PROTECT)
     created_at = models.DateTimeField(auto_now_add=True)
 
     def __str__(self):
@@ -33,7 +33,7 @@ class ServiceArea(models.Model):
     name = models.CharField(max_length=30)
     price = models.DecimalField(max_digits=8, decimal_places=2, default=0)
     polygon = models.PolygonField(null=True, blank=True)
-    provider = models.ForeignKey(Provider, null=False)
+    provider = models.ForeignKey(Provider, null=False, on_delete=models.CASCADE)
 
     objects = models.GeoManager()
 

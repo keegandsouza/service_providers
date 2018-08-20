@@ -25,8 +25,6 @@ class ProviderResource(ModelResource):
         queryset = Provider.objects.all()
         resource_name = 'provider'
         authorization = Authorization()
-               
-
 
 
 class ServiceAreaResource(ModelResource):
@@ -39,5 +37,3 @@ class ServiceAreaResource(ModelResource):
         filtering = {
             'polygon': ALL,
         }
-
-

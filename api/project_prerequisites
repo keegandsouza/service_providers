@@ -1,4 +1,9 @@
-requirements 
+Requirements 
+Mysql = 14.14
+Django = 1.10.6
+Python = 3.5
+
+
 Mysql
 sudo apt-get update
 sudo apt-get install python-pip python-dev mysql-server libmysqlclient-dev
@@ -7,7 +12,16 @@ Python & Packages
 sudo apt-get update
 apt install python3
 apt install python3-pip
-pip3 install Django
+pip3 install -I Django==1.10.6
 pip3 install django-tastypie
 pip3 install mysqlclient
 
+
+Readme -
+change ALLOWED_HOSTS in settings py
+
+Run -
+python manage.py runserver 0.0.0.0:8000
+
+API Docs -
+https://documenter.getpostman.com/view/5143436/RWTprbwT

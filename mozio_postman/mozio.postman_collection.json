@@ -1,0 +1,331 @@
+{
+	"info": {
+		"_postman_id": "cd7483cd-e204-4a07-9aa3-346ab40eb853",
+		"name": "mozio",
+		"schema": "https://schema.getpostman.com/json/collection/v2.1.0/collection.json"
+	},
+	"item": [
+		{
+			"name": "Create Provider",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Mozio pickup\",\n\t\"email\":\"mozio@gmai.com\",\n\t\"phone_number\": 45345545435,\n\t\"currency\" : \"/api/currency/2/\",\n\t\"language\" : \"/api/language/1/\"\n}"
+				},
+				"url": {
+					"raw": "18.206.147.92/api/provider/",
+					"host": [
+						"18",
+						"206",
+						"147",
+						"92"
+					],
+					"path": [
+						"api",
+						"provider",
+						""
+					]
+				},
+				"description": "Creates a new provider"
+			},
+			"response": []
+		},
+		{
+			"name": "Gets all providers",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "18.206.147.92/api/provider/",
+					"host": [
+						"18",
+						"206",
+						"147",
+						"92"
+					],
+					"path": [
+						"api",
+						"provider",
+						""
+					]
+				},
+				"description": "Gets all providers"
+			},
+			"response": []
+		},
+		{
+			"name": "Update  Provider",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"Keeg's pickup\",\n\t\"email\":\"keegangoa@gmai.com\",\n\t\"phone_number\": 1234678944\n}"
+				},
+				"url": {
+					"raw": "18.206.147.92/api/provider/2/",
+					"host": [
+						"18",
+						"206",
+						"147",
+						"92"
+					],
+					"path": [
+						"api",
+						"provider",
+						"2",
+						""
+					]
+				},
+				"description": "Updates a provider"
+			},
+			"response": []
+		},
+		{
+			"name": "Delete  Provider",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "18.206.147.92/api/provider/3/",
+					"host": [
+						"18",
+						"206",
+						"147",
+						"92"
+					],
+					"path": [
+						"api",
+						"provider",
+						"3",
+						""
+					]
+				},
+				"description": "Deletes a provider"
+			},
+			"response": []
+		},
+		{
+			"name": "Get All Service Areas",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "18.206.147.92/api/service_area/",
+					"host": [
+						"18",
+						"206",
+						"147",
+						"92"
+					],
+					"path": [
+						"api",
+						"service_area",
+						""
+					]
+				},
+				"description": "Gets all service area with providers"
+			},
+			"response": []
+		},
+		{
+			"name": "Create Service Area",
+			"request": {
+				"method": "POST",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"San Francisco Area 1\",\n\t\"polygon\":{\n        \"coordinates\":  [\n                    [\n                        [\n                            -23.15,\n                            113.12\n                        ],\n                        [\n                            -23.53,\n                            100.34\n                        ],\n                        [\n                            -23.67,\n                            112.9\n                        ],\n                        [\n                            -23.25,\n                            112.82\n                        ],\n                        [\n                            -23.15,\n                            113.12\n                        ]\n                    ]\n                ],\n        \"type\": \"Polygon\"\n    },\n\t\"price\": 50,\n\t\"provider\": \"/api/provider/1/\"\n}"
+				},
+				"url": {
+					"raw": "18.206.147.92/api/service_area/",
+					"host": [
+						"18",
+						"206",
+						"147",
+						"92"
+					],
+					"path": [
+						"api",
+						"service_area",
+						""
+					]
+				},
+				"description": "Creates a service area for a provider"
+			},
+			"response": []
+		},
+		{
+			"name": "Update Service Area",
+			"request": {
+				"method": "PUT",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": "{\n\t\"name\":\"San Francisco Area 2\",\n\t\"polygon\":{\n        \"coordinates\":  [\n                    [\n                        [\n                            -23.15,\n                            113.12\n                        ],\n                        [\n                            -23.53,\n                            100.34\n                        ],\n                        [\n                            -23.67,\n                            112.9\n                        ],\n                        [\n                            -23.25,\n                            112.82\n                        ],\n                        [\n                            -23.15,\n                            113.12\n                        ]\n                    ]\n                ],\n        \"type\": \"Polygon\"\n    },\n\t\"price\": 50,\n\t\"provider\": \"/api/provider/2/\"\n}"
+				},
+				"url": {
+					"raw": "18.206.147.92/api/service_area/2/",
+					"host": [
+						"18",
+						"206",
+						"147",
+						"92"
+					],
+					"path": [
+						"api",
+						"service_area",
+						"2",
+						""
+					]
+				},
+				"description": "Updates a service area details"
+			},
+			"response": []
+		},
+		{
+			"name": "Deletes Service Area",
+			"request": {
+				"method": "DELETE",
+				"header": [
+					{
+						"key": "Content-Type",
+						"value": "application/json"
+					}
+				],
+				"body": {
+					"mode": "raw",
+					"raw": ""
+				},
+				"url": {
+					"raw": "18.206.147.92/api/service_area/13/",
+					"host": [
+						"18",
+						"206",
+						"147",
+						"92"
+					],
+					"path": [
+						"api",
+						"service_area",
+						"13",
+						""
+					]
+				},
+				"description": "Deletes a service area"
+			},
+			"response": []
+		},
+		{
+			"name": "Available Location Service Providers ",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "18.206.147.92/api/service_area/?polygon__contains={\"type\": \"Point\", \"coordinates\": [-23.16, 113.11]}\n",
+					"host": [
+						"18",
+						"206",
+						"147",
+						"92"
+					],
+					"path": [
+						"api",
+						"service_area",
+						""
+					],
+					"query": [
+						{
+							"key": "polygon__contains",
+							"value": "{\"type\": \"Point\", \"coordinates\": [-23.16, 113.11]}\n"
+						}
+					]
+				},
+				"description": "Find the polygons and corresponding service provders available for a given location"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Currencies",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "18.206.147.92/api/currency/",
+					"host": [
+						"18",
+						"206",
+						"147",
+						"92"
+					],
+					"path": [
+						"api",
+						"currency",
+						""
+					]
+				},
+				"description": "Gets all available service provider currencies"
+			},
+			"response": []
+		},
+		{
+			"name": "Get Languages",
+			"request": {
+				"method": "GET",
+				"header": [],
+				"body": {},
+				"url": {
+					"raw": "18.206.147.92/api/language/",
+					"host": [
+						"18",
+						"206",
+						"147",
+						"92"
+					],
+					"path": [
+						"api",
+						"language",
+						""
+					]
+				},
+				"description": "Gets all available service provider languages"
+			},
+			"response": []
+		}
+	]
+}
